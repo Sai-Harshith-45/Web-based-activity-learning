@@ -1,428 +1,394 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forge Fitness | Build Your Strong</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forge Fitness | Build Your Strong</title>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-:root {
-    --dark: #101510;
-    --green: #b7f34a;
-    --white: #ffffff;
-    --gray: #b8c0b5;
-    --card: #1b241c;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: var(--dark);
-    color: var(--white);
-    line-height: 1.6;
-}
-
-header {
-    padding: 22px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #080c08;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--green);
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 22px;
-}
-
-nav a:hover {
-    color: var(--green);
-}
-
-.hero {
-    min-height: 500px;
-    padding: 100px 8%;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(90deg, #101510 25%, #263325 100%);
-}
-
-.hero-content {
-    max-width: 700px;
-}
-
-.tag {
-    color: var(--green);
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-h1 {
-    font-size: clamp(42px, 7vw, 76px);
-    line-height: 1.05;
-    margin: 20px 0;
-}
-
-h1 span {
-    color: var(--green);
-}
-
-.hero p, .section-intro {
-    color: var(--gray);
-    max-width: 650px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 13px 25px;
-    background: var(--green);
-    color: #101510;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-section {
-    padding: 75px 8%;
-}
-
-.section-title {
-    font-size: 36px;
-    margin-bottom: 12px;
-}
-
-.section-intro {
-    margin-bottom: 35px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.card {
-    background: var(--card);
-    border: 1px solid #354035;
-    border-radius: 12px;
-    padding: 28px;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    border-color: var(--green);
-}
-
-.card .number {
-    font-size: 30px;
-    color: var(--green);
-    font-weight: bold;
-}
-
-.card h3 {
-    margin: 12px 0;
-}
-
-.card p {
-    color: var(--gray);
-}
-
-.inside {
-    background: #182019;
-}
-
-.photo-card {
-    min-height: 180px;
-    display: flex;
-    align-items: end;
-    background: linear-gradient(145deg, #344733, #111711);
-}
-
-.photo-card h3 {
-    color: var(--green);
-}
-
-.price {
-    color: var(--green);
-    font-size: 27px;
-    font-weight: bold;
-    margin: 15px 0;
-}
-
-.card ul {
-    list-style: none;
-    margin-top: 18px;
-}
-
-.card li {
-    padding: 8px 0;
-    color: var(--gray);
-    border-bottom: 1px solid #354035;
-}
-
-.card li::before {
-    content: "✓ ";
-    color: var(--green);
-}
-
-.featured {
-    border: 2px solid var(--green);
-}
-
-.schedule-card {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.schedule-card strong {
-    color: var(--green);
-}
-
-.contact {
-    text-align: center;
-    background: var(--green);
-    color: #101510;
-}
-
-.contact p {
-    margin-top: 12px;
-}
-
-.contact .btn {
-    background: #101510;
-    color: white;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    color: var(--gray);
-    font-size: 14px;
-}
-
-@media (max-width: 800px) {
-    .grid {
-        grid-template-columns: 1fr;
+    body {
+      font-family: Arial, sans-serif;
+      background: #101510;
+      color: white;
+      line-height: 1.6;
     }
 
     header {
-        flex-direction: column;
-        gap: 12px;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #080c08;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #b7f34a;
     }
 
     nav a {
-        margin: 0 7px;
-        font-size: 14px;
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+    }
+
+    nav a:hover {
+      color: #b7f34a;
     }
 
     .hero {
-        padding: 75px 8%;
+      min-height: 500px;
+      padding: 100px 8%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #101510 25%, #263325 100%);
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .tag {
+      color: #b7f34a;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    h1 {
+      font-size: 76px;
+      line-height: 1.05;
+      margin: 20px 0;
+    }
+
+    .green-text {
+      color: #b7f34a;
+    }
+
+    .hero-description,
+    .section-intro {
+      color: #b8c0b5;
+      max-width: 650px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 13px 25px;
+      background: #b7f34a;
+      color: #101510;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
     }
 
     section {
-        padding: 55px 8%;
+      padding: 75px 8%;
     }
-}
-</style>
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      margin-bottom: 35px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 22px;
+    }
+
+    .card {
+      background: #1b241c;
+      border: 1px solid #354035;
+      border-radius: 12px;
+      padding: 28px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #b7f34a;
+    }
+
+    .number {
+      font-size: 30px;
+      color: #b7f34a;
+      font-weight: bold;
+    }
+
+    .card-title {
+      margin: 12px 0;
+    }
+
+    .card-description {
+      color: #b8c0b5;
+    }
+
+    .inside {
+      background: #182019;
+    }
+
+    .photo-card {
+      min-height: 180px;
+      display: flex;
+      align-items: end;
+      background: linear-gradient(145deg, #344733, #111711);
+    }
+
+    .photo-title {
+      color: #b7f34a;
+    }
+
+    .price {
+      color: #b7f34a;
+      font-size: 27px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .price small {
+      font-size: 14px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-top: 18px;
+    }
+
+    .feature-list li {
+      padding: 8px 0;
+      color: #b8c0b5;
+      border-bottom: 1px solid #354035;
+    }
+
+    .featured {
+      border: 2px solid #b7f34a;
+    }
+
+    .schedule-card {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .schedule-time {
+      color: #b7f34a;
+    }
+
+    .contact {
+      text-align: center;
+      background: #b7f34a;
+      color: #101510;
+    }
+
+    .contact p {
+      margin-top: 12px;
+    }
+
+    .contact-button {
+      background: #101510;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #b8c0b5;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <header>
     <div class="logo">FORGE FITNESS</div>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#training">Training</a>
-        <a href="#membership">Membership</a>
-        <a href="#classes">Classes</a>
-        <a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#training">Training</a>
+      <a href="#membership">Membership</a>
+      <a href="#classes">Classes</a>
+      <a href="#contact">Contact</a>
     </nav>
-</header>
+  </header>
 
-<main>
+  <main>
     <section class="hero" id="home">
-        <div class="hero-content">
-            <p class="tag">FORGE FITNESS</p>
-            <h1>BUILD YOUR <span>STRONG.</span></h1>
-            <p>
-                Train with purpose. Find your pace.
-                Become stronger.
-            </p>
-            <a href="#membership" class="btn">Explore Memberships</a>
-        </div>
+      <div class="hero-content">
+        <p class="tag">FORGE FITNESS</p>
+        <h1>BUILD YOUR <span class="green-text">STRONG.</span></h1>
+        <p class="hero-description">
+          Train with purpose. Find your pace.
+          Become stronger.
+        </p>
+        <a href="#membership" class="button">Explore Memberships</a>
+      </div>
     </section>
 
     <section id="training">
-        <h2 class="section-title">TRAIN WITH A PLAN</h2>
-        <p class="section-intro">
-            A gym built for every level, with strength equipment,
-            personal coaching, and coach-led group sessions to
-            help you stay consistent and make progress.
-        </p>
+      <h2 class="section-title">TRAIN WITH A PLAN</h2>
+      <p class="section-intro">
+        A gym built for every level, with strength equipment,
+        personal coaching, and coach-led group sessions to
+        help you stay consistent and make progress.
+      </p>
 
-        <div class="grid">
-            <div class="card">
-                <div class="number">01</div>
-                <h3>STRENGTH FLOOR</h3>
-                <p>Weights, racks, and strength equipment.</p>
-            </div>
-
-            <div class="card">
-                <div class="number">02</div>
-                <h3>PERSONAL COACHING</h3>
-                <p>One-to-one support and goal setting.</p>
-            </div>
-
-            <div class="card">
-                <div class="number">03</div>
-                <h3>GROUP ENERGY</h3>
-                <p>Structured sessions and community.</p>
-            </div>
+      <div class="grid">
+        <div class="card">
+          <div class="number">01</div>
+          <h3 class="card-title">STRENGTH FLOOR</h3>
+          <p class="card-description">Weights, racks, and strength equipment.</p>
         </div>
+
+        <div class="card">
+          <div class="number">02</div>
+          <h3 class="card-title">PERSONAL COACHING</h3>
+          <p class="card-description">One-to-one support and goal setting.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">03</div>
+          <h3 class="card-title">GROUP ENERGY</h3>
+          <p class="card-description">Structured sessions and community.</p>
+        </div>
+      </div>
     </section>
 
     <section class="inside">
-        <h2 class="section-title">INSIDE FORGE</h2>
-        <p class="section-intro">
-            Find your training style and build your strength.
-        </p>
+      <h2 class="section-title">INSIDE FORGE</h2>
+      <p class="section-intro">
+        Find your training style and build your strength.
+      </p>
 
-        <div class="grid">
-            <div class="card photo-card">
-                <div>
-                    <div class="number">01</div>
-                    <h3>PERSONAL TRAINING</h3>
-                </div>
-            </div>
-
-            <div class="card photo-card">
-                <div>
-                    <div class="number">02</div>
-                    <h3>GROUP WORKOUTS</h3>
-                </div>
-            </div>
-
-            <div class="card photo-card">
-                <div>
-                    <div class="number">03</div>
-                    <h3>STRENGTH TRAINING</h3>
-                </div>
-            </div>
+      <div class="grid">
+        <div class="card photo-card">
+          <div>
+            <div class="number">01</div>
+            <h3 class="photo-title">PERSONAL TRAINING</h3>
+          </div>
         </div>
+
+        <div class="card photo-card">
+          <div>
+            <div class="number">02</div>
+            <h3 class="photo-title">GROUP WORKOUTS</h3>
+          </div>
+        </div>
+
+        <div class="card photo-card">
+          <div>
+            <div class="number">03</div>
+            <h3 class="photo-title">STRENGTH TRAINING</h3>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="membership">
-        <h2 class="section-title">FIND YOUR MEMBERSHIP</h2>
-        <p class="section-intro">
-            Choose a plan that matches your fitness goals.
-        </p>
+      <h2 class="section-title">FIND YOUR MEMBERSHIP</h2>
+      <p class="section-intro">
+        Choose a plan that matches your fitness goals.
+      </p>
 
-        <div class="grid">
-            <div class="card">
-                <h3>STARTER</h3>
-                <div class="price">₹1,499 <small>/ month</small></div>
-                <ul>
-                    <li>Gym floor access</li>
-                    <li>Fitness assessment</li>
-                    <li>Workout orientation</li>
-                </ul>
-                <a href="#contact" class="btn">Get Started</a>
-            </div>
-
-            <div class="card featured">
-                <h3>UNLIMITED</h3>
-                <div class="price">₹2,499 <small>/ month</small></div>
-                <ul>
-                    <li>Full gym access</li>
-                    <li>Group classes</li>
-                    <li>Monthly progress check-in</li>
-                </ul>
-                <a href="#contact" class="btn">Join Now</a>
-            </div>
-
-            <div class="card">
-                <h3>COACHING</h3>
-                <div class="price">₹4,999 <small>/ month</small></div>
-                <ul>
-                    <li>Unlimited membership</li>
-                    <li>Personal coaching sessions</li>
-                    <li>Individual training plan</li>
-                </ul>
-                <a href="#contact" class="btn">Get Coaching</a>
-            </div>
+      <div class="grid">
+        <div class="card">
+          <h3>STARTER</h3>
+          <div class="price">₹1,499 <small>/ month</small></div>
+          <ul class="feature-list">
+            <li>✓ Gym floor access</li>
+            <li>✓ Fitness assessment</li>
+            <li>✓ Workout orientation</li>
+          </ul>
+          <a href="#contact" class="button">Get Started</a>
         </div>
+
+        <div class="card featured">
+          <h3>UNLIMITED</h3>
+          <div class="price">₹2,499 <small>/ month</small></div>
+          <ul class="feature-list">
+            <li>✓ Full gym access</li>
+            <li>✓ Group classes</li>
+            <li>✓ Monthly progress check-in</li>
+          </ul>
+          <a href="#contact" class="button">Join Now</a>
+        </div>
+
+        <div class="card">
+          <h3>COACHING</h3>
+          <div class="price">₹4,999 <small>/ month</small></div>
+          <ul class="feature-list">
+            <li>✓ Unlimited membership</li>
+            <li>✓ Personal coaching sessions</li>
+            <li>✓ Individual training plan</li>
+          </ul>
+          <a href="#contact" class="button">Get Coaching</a>
+        </div>
+      </div>
     </section>
 
     <section class="inside" id="classes">
-        <h2 class="section-title">WEEKLY CLASS SCHEDULE</h2>
-        <p class="section-intro">
-            Stay active with our scheduled fitness classes.
-        </p>
+      <h2 class="section-title">WEEKLY CLASS SCHEDULE</h2>
+      <p class="section-intro">
+        Stay active with our scheduled fitness classes.
+      </p>
 
-        <div class="card schedule-card">
-            <div>
-                <h3>Strength Circuit</h3>
-                <p>Build strength and endurance.</p>
-            </div>
-            <strong>Mon & Wed - 6:30 PM</strong>
+      <div class="card schedule-card">
+        <div>
+          <h3>Strength Circuit</h3>
+          <p class="card-description">Build strength and endurance.</p>
         </div>
+        <strong class="schedule-time">Mon &amp; Wed - 6:30 PM</strong>
+      </div>
 
-        <div class="card schedule-card">
-            <div>
-                <h3>HIIT Express</h3>
-                <p>High-intensity fitness training.</p>
-            </div>
-            <strong>Tue & Thu - 7:00 AM</strong>
+      <div class="card schedule-card">
+        <div>
+          <h3>HIIT Express</h3>
+          <p class="card-description">High-intensity fitness training.</p>
         </div>
+        <strong class="schedule-time">Tue &amp; Thu - 7:00 AM</strong>
+      </div>
 
-        <div class="card schedule-card">
-            <div>
-                <h3>Mobility & Core</h3>
-                <p>Improve flexibility and core strength.</p>
-            </div>
-            <strong>Saturday - 9:00 AM</strong>
+      <div class="card schedule-card">
+        <div>
+          <h3>Mobility &amp; Core</h3>
+          <p class="card-description">Improve flexibility and core strength.</p>
         </div>
+        <strong class="schedule-time">Saturday - 9:00 AM</strong>
+      </div>
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="section-title">READY TO BEGIN?</h2>
-        <p>Start your fitness journey with Forge Fitness.</p>
-        <p><strong>Address:</strong> Add your gym address here</p>
-        <p><strong>Phone:</strong> Add your phone number</p>
-        <p><strong>Email:</strong> Add your email address</p>
-        <p><strong>Hours:</strong> Add your opening hours</p>
-        <a href="mailto:your-email@example.com" class="btn">
-            Contact Us
-        </a>
+      <h2 class="section-title">READY TO BEGIN?</h2>
+      <p>Start your fitness journey with Forge Fitness.</p>
+      <p><strong>Address:</strong> Add your gym address here</p>
+      <p><strong>Phone:</strong> Add your phone number</p>
+      <p><strong>Email:</strong> Add your email address</p>
+      <p><strong>Hours:</strong> Add your opening hours</p>
+      <a href="mailto:your-email@example.com" class="button contact-button">
+        Contact Us
+      </a>
     </section>
-</main>
+  </main>
 
-<footer>
+  <footer>
     <p>© 2026 Forge Fitness. All rights reserved.</p>
     <p>Confirm plans, class times, and contact details before publishing.</p>
-</footer>
+  </footer>
 
 </body>
 </html>
-
